@@ -2,21 +2,21 @@ import React, { useState } from 'react';
 import './App.css';
 
 const ItemListManager = () => {
-  // State to store the list of items
+
   const [items, setItems] = useState([]);
-  // State to store the current input value
+
   const [input, setInput] = useState('');
 
-  // Function to handle the input change
+
   const handleInputChange = (e) => {
     setInput(e.target.value);
   };
 
-  // Function to handle adding a new item to the list
+
   const handleAddItem = () => {
     if (input.trim() !== '') {
       setItems([...items, input]);
-      setInput(''); // Clear the input field
+      setInput('');
     }
   };
 
